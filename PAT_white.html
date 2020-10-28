@@ -2,6 +2,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <link href="framework/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <title>【女款】学霸养成文化衫，穿它就对了！</title>
     <style>
         /***************** CSS重置 *******************/
@@ -96,386 +97,505 @@
     .top-bar .right p{
         font-size: 4.5vw;
     }
-    </style>
+</style>
 
-    <style>
-        .item-info {
-            position: relative;
-            flex-direction: column;
-        }
-        .item-info .item-imgs {
-            /* height: 27.5vw; */
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-            width: 100vw;
-            background-color: #7e7e7e;
-        }
+<style>
+    .item-info {
+        position: relative;
+        flex-direction: column;
+    }
+    .item-info .item-imgs {
+        /* height: 27.5vw; */
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        width: 100vw;
+        background-color: #7e7e7e;
+    }
 
-        .item-info .item-imgs .item-img{
-            width: 100vw;
-            height: 100vw;
-            flex-direction: column;
-        }
-        .wd-swipe, .wd-swipe-items-wrap {
-            overflow: hidden;
-            position: relative;
-        }
-        .wd-swipe {
-            height: 3vw;
-        }
+    .item-info .item-imgs .item-img{
+        width: 100vw;
+        height: 100vw;
+        flex-direction: column;
+    }
+    .wd-swipe, .wd-swipe-items-wrap {
+        overflow: hidden;
+        position: relative;
+    }
+    .wd-swipe {
+        height: 4vw;
+    }
 
-        .item-info .item-imgs .item-imgs-tip {
-            position: absolute;
-            bottom: 8px;
-            background: rgba(0,0,0,.5);
-            box-shadow: 0 0.01rem 0.02rem 0 rgba(0,0,0,.19);
-            display: inline-block;
-            height: 21px;
-            line-height: 21px;
-            left: 9px;
-            border-radius: .04rem;
-            overflow: hidden;
-            color: #fff;
-            z-index: 2;
-        }
-        * {
-            -webkit-tap-highlight-color: transparent;
-        }
-        .item-info .item-imgs .item-imgs-tip .collect-count, .item-info .item-imgs .item-imgs-tip .sale-collect[data-v-ac0f362a], .item-info .item-imgs .item-imgs-tip .sale-count[data-v-ac0f362a] {
-            display: inline-block;
-            font-size: 12px;
-            margin-left: .2rem;
-            margin-right: .2rem;
-        }
-        .wd-swipe-indicator-wrap {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: .7rem;
-        }
-        .wd-swipe-indicator-wrap {
-            z-index: 2;
-        }
-        .wd-swipe-number-indicator {
-            position: absolute;
-            width: 1rem;
-            height: .7rem;
-            right: 0;
-            font-size: .18rem;
-            text-align: center;
-            line-height: .7rem;
-            color: #fff;
-        }
-        .wd-swipe-number-indicator {
-            font-size: 12px!important;
-            background: rgba(0,0,0,.5)!important;
-            box-shadow: 0 1px 2px 0 rgba(0,0,0,.19)!important;
-            border-radius: 2px!important;
-            color: #fff!important;
-            right: 9px!important;
-            bottom: 8px!important;
-            height: 21px!important;
-            line-height: 21px!important;
-            padding-left: 10px;
-            padding-right: 10px;
-            width: auto!important;
-        }
-    </style>
-    <style>
-        .item-info .item-wrap {
-            position: relative;
-            overflow: hidden;
-            padding: .24rem .3rem .3rem;
-            background-color: #fff;
-            border-top: 0;
-            border-left: 0;
-            border-right: 0;
-            border: 0;
-        }
-        .item-info .item-wrap .item-wrap-block  {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-            flex-direction: column;
-        }
-        .item-info .item-wrap .price-wrap  {
-            position: relative;
-        }
-        .item-info .item-wrap .price-wrap .cur-price {
-            color: #fe5a4c;
-            font-size: 24px;
-            font-weight: 700;
-            display: -webkit-inline-box;
-            display: -webkit-inline-flex;
-            display: inline-flex;
-            -webkit-box-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-            margin-right: .1rem;
-            line-height: 1;
-            padding-left: 12px;
-        }
-        .item-info .item-wrap .title-wrap{
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: row;
-            flex-direction: row;
-        }
+    .item-info .item-imgs .item-imgs-tip {
+        position: absolute;
+        bottom: 8px;
+        background: rgba(0,0,0,.5);
+        box-shadow: 0 0.01rem 0.02rem 0 rgba(0,0,0,.19);
+        display: inline-block;
+        height: 25px;
+        line-height: 21px;
+        left: 9px;
+        border-radius: .14rem;
+        overflow: hidden;
+        color: #fff;
+        z-index: 2;
+    }
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+    .item-info .item-imgs .item-imgs-tip .collect-count, .item-info .item-imgs .item-imgs-tip .sale-collect[data-v-ac0f362a], .item-info .item-imgs .item-imgs-tip .sale-count[data-v-ac0f362a] {
+        display: inline-block;
+        font-size: 14px;
+        margin-left: .2rem;
+        margin-right: .2rem;
+    }
+    .wd-swipe-indicator-wrap {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: .7rem;
+    }
+    .wd-swipe-indicator-wrap {
+        z-index: 2;
+    }
+    .wd-swipe-number-indicator {
+        position: absolute;
+        width: 1rem;
+        height: .7rem;
+        right: 0;
+        font-size: .18rem;
+        text-align: center;
+        line-height: .7rem;
+        color: #fff;
+    }
+    .wd-swipe-number-indicator {
+        font-size: 12px!important;
+        background: rgba(0,0,0,.5)!important;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,.19)!important;
+        border-radius: 2px!important;
+        color: #fff!important;
+        right: 9px!important;
+        bottom: 8px!important;
+        height: 21px!important;
+        line-height: 21px!important;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: auto!important;
+    }
+</style>
+<style>
+    .item-info .item-wrap {
+        position: relative;
+        overflow: hidden;
+        padding: .24rem .3rem .3rem;
+        background-color: #fff;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border: 0;
+    }
+    .item-info .item-wrap .item-wrap-block  {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+    .item-info .item-wrap .price-wrap  {
+        position: relative;
+    }
+    .item-info .item-wrap .price-wrap .cur-price {
+        color: #fe5a4c;
+        font-size: 24px;
+        font-weight: 700;
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        margin-right: .1rem;
+        line-height: 1;
+        padding-left: 12px;
+        width: 50vw;
+    }
+    .item-info .item-wrap .price-wrap .sale-count{
+        width: 50vw;
+        margin-left: 30vw;
+        align-items: center;
+        color: gray;
+    }
+    .item-info .item-wrap .title-wrap{
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        width: 100vw;
+    }
 
-        .item-info .item-wrap .title-wrap .item-title{
-            margin-top: .12rem;
-            -webkit-box-flex: 1;
-            -webkit-flex: 1;
-            flex: 1;
-            color: #333;
-            word-break: break-all;
-            font-size: 16px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            overflow: hidden;
-            -webkit-box-orient: vertical;
-            width: 100%;
-            float: left;
-            font-weight: 700;
-        }
+    .item-info .item-wrap .title-wrap .item-title{
+        margin-top: .5vw;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        color: #333;
+        word-break: break-all;
+        font-size: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        width: 50vw;
+        margin-left: 3vw;
+        /* float: left; */
+        font-weight: 700;
+    }
 
-        .item-info .item-wrap .title-wrap .icon-collect-empty, .item-info .item-wrap .title-wrap .icon-collect-solid {
-            color: gray;
-        }
-        .item-info .item-wrap .title-wrap .fav {
-            width: 15vw;
-            margin-top: .2rem;
-            margin-left: .4rem;
-            font-size: 12px;
-            text-align: center;
-            vertical-align: middle;
-            display: inline-block;
-            -webkit-align-self: center;
-            align-self: center;
-        }
-        .item-promotion-wrap {
-            background-color: #fff;
-            padding: 0 .3rem;
-        }
-        .sku-button .sku-content{
-            font-family: PingFangSC-Regular;
-            font-size: 14px;
-            margin-left: .3rem;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-flex: 1;
-            -webkit-flex: 1;
-            flex: 1;
-            -webkit-box-orient: vertical;
-        }
+    .item-info .item-wrap .title-wrap .icon-collect-empty, .item-info .item-wrap .title-wrap .icon-collect-solid {
+        color: gray;
+    }
+    .item-info .item-wrap .title-wrap .fav {
+        width: 10vw;
+        margin-top: .1vw;
+        /* margin-left: 4vw; */
+        font-size: 14px;
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        -webkit-align-self: center;
+        align-self: center;
+    }
+    .item-promotion-wrap {
+        background-color: #fff;
+        padding: 0 .3rem;
+    }
+    .sku-button .sku-content{
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        margin-left: .3rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        -webkit-box-orient: vertical;
+    }
 
-        .sku-button .sku-content .sku-content-button-msg {
-            color: #373c43;
-            font-weight: 700;
-            line-height: 2;
-        }
-        .sku-button .sku-content .sku-content-preview[data-v-6fb3f00a] {
-            background: #f5f5f5;
-            border-radius: 3px;
-            font-size: 12px;
-            line-height: 1.5;
-            color: #989ca8;
-            margin-right: .1rem;
-            padding: 2px 5px;
-            max-width: 3rem;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-        }
-    </style>
+    .sku-button .sku-content .sku-content-button-msg {
+        color: #373c43;
+        font-weight: 700;
+        line-height: 2;
+    }
+    .sku-button .sku-content .sku-content-preview {
+        background: #f5f5f5;
+        border-radius: 3px;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #989ca8;
+        margin-right: .1rem;
+        padding: 2px 5px;
+        max-width: 3rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+</style>
 
-    <style>
-        .sku-button {
-            position: relative;
-            background: #fff;
-            padding: .2rem .3rem 0;
-            display: flex;
-            -webkit-box-pack: justify;
-            -webkit-justify-content: space-between;
-            justify-content: space-between;
-        }
+<style>
+    .sku-button {
+        position: relative;
+        background: #fff;
+        padding: .2rem .3rem 0;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
 
-        .sku-button .sku-title {
-            font-family: PingFangSC-Regular;
-            line-height: 2;
-            width: .74rem;
-            font-size: 14px;
-            font-weight: 700;
-            margin-right: .1rem;
-            color: #999;
-        }
+    .sku-button .sku-title {
+        font-family: PingFangSC-Regular;
+        line-height: 2;
+        width: .74rem;
+        font-size: 14px;
+        font-weight: 700;
+        margin-right: .1rem;
+        color: #999;
+    }
 
-        .no-margin-top {
-            margin-top: -.2rem;
-        }
+    .no-margin-top {
+        margin-top: -.2rem;
+    }
 
-        .market-info-wrap{
-            font-family: PingFangSC-Regular;
-            background-color: #fff;
-            overflow: hidden;
-            padding-left: .3rem;
-            padding-right: .3rem;
-            padding-bottom: .2rem;
-            box-sizing: border-box;
-        }
+    .market-info-wrap{
+        font-family: PingFangSC-Regular;
+        background-color: #fff;
+        overflow: hidden;
+        padding-left: .3rem;
+        padding-right: .3rem;
+        padding-bottom: .2rem;
+        box-sizing: border-box;
+    }
 
-        .market-info-wrap .delivery, .market-info-wrap .postage, .market-info-wrap .share{
-            display: flex;
-            -webkit-box-align: start;
-            align-items: flex-start;
-            padding-top: .1rem;
-            padding-bottom: .1rem;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-        }
-        .market-info-wrap .delivery .delivery-title{
-            font-family: PingFangSC-Regular;
-            width: .74rem;
-            font-size: 14px;
-            line-height: 2;
-            margin-right: .1rem;
-            color: #999;
-            font-weight: 700;
-        }
-        .market-info-wrap .delivery .delivery-block{
-            font-size: 14px;
-            color: #190000;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-flex: 1;
-            -webkit-flex: 1;
-            flex: 1;
-            -webkit-box-orient: vertical;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-direction: column;
-            flex-direction: column;
-            -webkit-box-align: start;
-            -webkit-align-items: start;
-            align-items: start;
-            -webkit-box-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-        }
-        .market-info-wrap .delivery .delivery-address{
-            position: relative;
-            padding-right: .45rem;
-            line-height: 2;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-flex: 1;
-            -webkit-flex: 1;
-            flex: 1;
-            -webkit-box-orient: vertical;
-        }
-        .market-info-wrap .delivery .delivery-block .delivery-address-location{
-            font-family: PingFangSC-Regular;
-            color: #373c43;
-            font-weight: 700;
-        }
-        .market-info-wrap .delivery .delivery-address-tips{
-            position: relative;
-            padding-right: .45rem;
-            line-height: 2;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-flex: 1;
-            -webkit-flex: 1;
-            flex: 1;
-            -webkit-box-orient: vertical;
-        }
+    .market-info-wrap .delivery, .market-info-wrap .postage, .market-info-wrap .share{
+        display: flex;
+        -webkit-box-align: start;
+        align-items: flex-start;
+        padding-top: .1rem;
+        padding-bottom: .1rem;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+    .market-info-wrap .delivery .delivery-title{
+        font-family: PingFangSC-Regular;
+        width: .74rem;
+        font-size: 14px;
+        line-height: 2;
+        margin-right: .1rem;
+        color: #999;
+        font-weight: 700;
+    }
+    .market-info-wrap .delivery .delivery-block{
+        font-size: 14px;
+        color: #190000;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        -webkit-box-orient: vertical;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -webkit-align-items: start;
+        align-items: start;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+    .market-info-wrap .delivery .delivery-address{
+        position: relative;
+        padding-right: .45rem;
+        line-height: 2;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        -webkit-box-orient: vertical;
+    }
+    .market-info-wrap .delivery .delivery-block .delivery-address-location{
+        font-family: PingFangSC-Regular;
+        color: #373c43;
+        font-weight: 700;
+    }
+    .market-info-wrap .delivery .delivery-address-tips{
+        position: relative;
+        padding-right: .45rem;
+        line-height: 2;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        -webkit-box-orient: vertical;
+    }
 
-        .market-info-wrap .delivery .delivery-ul{
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            max-width: 100%;
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: row;
-            flex-direction: row;
-        }
+    .market-info-wrap .delivery .delivery-ul{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        max-width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
 
-        .info-wrap .postage, .market-info-wrap .share {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-align: start;
-            -webkit-align-items: flex-start;
-            align-items: flex-start;
-            padding-top: .1rem;
-            padding-bottom: .1rem;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-        }
-        .market-info-wrap .instalment {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-align: start;
-            -webkit-align-items: flex-start;
-            align-items: flex-start;
-            padding-top: .1rem;
-            padding-bottom: .1rem;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-        }
+    .info-wrap .postage, .market-info-wrap .share {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        padding-top: .1rem;
+        padding-bottom: .1rem;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+    .market-info-wrap .instalment {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        padding-top: .1rem;
+        padding-bottom: .1rem;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
 
-        .market-info-wrap .guarantee-wrap {
-            height: .6rem;
-            line-height: .6rem;
-            position: relative;
-            width: 100%;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            color: #333;
-        }
-        .market-info-wrap .pt20{
-            padding-top: .2rem;
-        }
-        .popup {
-            max-width: 640px;
-            margin: 0 auto;
-            touch-action: none;
-            border-top-left-radius: 12px;
-            border-top-right-radius: 12px;
-        }
+    .market-info-wrap .guarantee-wrap {
+        height: .6rem;
+        line-height: .6rem;
+        position: relative;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        color: #333;
+    }
+    .market-info-wrap .pt20{
+        padding-top: .2rem;
+    }
+    .popup {
+        max-width: 640px;
+        margin: 0 auto;
+        touch-action: none;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
 
-        .market-info-wrap .guarantee-wrap .icon-approve {
-            display: inline-block;
-            margin-right: .3rem;
-            font-size: 13px;
-        }
+    .market-info-wrap .guarantee-wrap .icon-approve {
+        display: inline-block;
+        margin-right: .3rem;
+        font-size: 13px;
+    }
 
-    </style>
+</style>
 
-    <style>
+<style>
+.c-container {
+    position: relative;
+    background-color: #fff;
+    border: 0;
+    -webkit-border-image: url(//s.geilicdn.com/node/itemServerMixed/img/3c0a77a….png) 2 stretch;
+    border-image: url(//s.geilicdn.com/node/itemServerMixed/img/3c0a77a….png) 2 stretch;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: .06rem;
+}
+.c-container .c-title  {
+    font-size: 16px;
+    line-height: .36rem;
+    color: #373c43;
+    font-weight: 700;
+    padding: .36rem .3rem .3rem;
+}
+.c-container .c-score {
+    font-size: .26rem;
+    color: #f2263f;
+    position: absolute;
+    top: .36rem;
+    right: .52rem;
+}
+.c-comment{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.c-comment .c-comment-list{
+    width: auto;
+    white-space: nowrap;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0;
+    padding: 0 .3rem;
+    padding-bottom: .36rem;
+}
+.c-comment .c-comment-item{
+    display: inline-block;
+    margin-right: .2rem;
+    overflow: hidden;
+}
+.c-comment .c-comment-item.last {
+    border-radius: .06rem;
+    margin-right: 0;
+    vertical-align: bottom;
+}
 
-    </style>
+.item-like-wrap{
+    height: 1.14rem;
+    line-height: 1.14rem;
+    width: 100%;
+    background-color: #fff;
+    padding-left: .3rem;
+}
+.item-like-wrap .item-like-container{
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+}
+.item-like-wrap .praise[data-v-8fe8c47e] {
+    background-color: #faeeee;
+    padding: .06rem .2rem;
+    padding-top: 0.06rem;
+    padding-right: 0.2rem;
+    padding-bottom: 0.06rem;
+    padding-left: 0.2rem;
+    vertical-align: middle;
+    border-radius: 30px;
+}
+.item-like-wrap .praise img {
+    width: 13px;
+    height: 13px;
+    vertical-align: middle;
+    margin-left: .02rem;
+    position: relative;
+    bottom: 2px;
+}
+</style>
+
+<style>
+    /****************** 订单合计部分 ******************/
+.main .total{
+    width: 100%;
+    height: 14vw;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+}
+.main .total .total-left{
+    flex: 2;
+    background-color: #505051;
+    color: #fff;
+    font-size: 4.5vw;
+    font-weight: 700;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .total .total-right{
+    flex: 1;
+    background-color: #38CA73;
+    color: #fff;
+    font-size: 4.5vw;
+    font-weight: 700;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>
 </head>
 
 <body>
@@ -507,12 +627,12 @@
                             <img src="https://si.geilicdn.com/pcitem1461268042-1799000001751bbdacea0a21c2a8-unadjust_717_909.png.webp?w=750&amp;h=750&amp;cp=1" class="item-img">
                         </section> -->
                         <span class="item-imgs-tip">
-                            <em class="collect-count">收藏3</em>
+                            <div class="collect-count">收藏365</div>
                         </span>
                     </div> 
                     <div class="wd-swipe-indicator-wrap">
-                        <div class="wd-swipe-number-indicator">1 / 4
-
+                        <div class="wd-swipe-number-indicator">
+                            1 / 4
                         </div>
                     </div>
                 </div>
@@ -521,15 +641,15 @@
         <div class="item-wrap">
             <div class="item-wrap-block">
                 <div class="price-wrap">
-                    <span class="cur-price">39-49</span> 
-                    <em class="sale-count">销量 10</em>
+                    <span class="cur-price"> <i class="fa fa-cny"></i>&nbsp;39-49</span> 
+                    <span class="sale-count">销量 180</span>
                 </div>
                 <div class="title-wrap">
                     <div class="item-title">
                     【女款】学霸养成文化衫，穿它就对了！
                     </div>
-                    <span class="fav icon-collect-empty">
-                        收藏
+                    <span class="fav">
+                        <i class="fa fa-heart-o" style="color: red;"></i>收藏
                     </span>
                 </div>
             </div> 
@@ -539,7 +659,7 @@
         </div>
     </div>
     <div>
-        <div class="sku-button wd-icon-right2" data-spider-action-name="sku_button_select">
+        <div class="sku-button wd-icon-right2">
             <span class="sku-title">选择</span> 
             <div class="sku-content">
                 <p class="sku-content-button-msg">
@@ -674,6 +794,16 @@
                 <img src="https://si.geilicdn.com/hz_img_5b20000001633f15ed110a026860_54_52_unadjust.png.webp" lazy="loaded">
                 <em >1</em>
             </span>
+        </div>
+    </div>
+
+    <!-- 底部固定界面 -->
+    <div class="total">
+        <div class="total-left">
+            &#165;49
+        </div>
+        <div class="total-right" onclick="location.href='payment.html'">
+            去支付
         </div>
     </div>
 </div>

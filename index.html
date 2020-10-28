@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+    <link href="framework/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <title>杭州百腾周边产品</title>
+    <style>
+        /***************** CSS重置 *******************/
+        html,body,div,span,h1,h2,h3,h4,h5,h6,ul,ol,li,p{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            font-weight: 400;
+            list-style: none;
+            font-style: normal;
+        }
+        html,body{
+            width: 100vw;
+            height: 100vw;
+            font-family: "pingfang";
+        }
+        ul,ol{
+            list-style:none;
+        }
+        a{
+            text-decoration: none;
+        }
+        /* div{
+            display: block;
+        } */
+    </style>
+
+    <style>
+        /* 圆形头像 */
+        .round_icon{
+            width: 34px;
+            height: 34px;
+            display: flex;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            }
+    </style>
+
+    <style>
+        /* 头部div的设置 */
+        .main{
+            flex-direction:column;
+            width: 100vw;
+            height: 100vw;
+        }
+        .top-bar{
+            width: 100vw;
+            margin: 0 auto;
+            height: 11.5vw;
+            margin-top: 1.3vw;
+            border-radius: 2px;
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+            background-color: #f7f7f7;
+            color: #000;
+            /* max-width: 640px; */
+            margin: 0 auto;
+        }
+        .top-bar .left{
+            display: flex;
+            align-items: center;
+            margin-right: 1vw;
+            user-select: none;
+        }
+        
+        .top-bar .left img{
+            width: 20vw;
+            height:  20vw;
+            margin-right: 20vw;
+            border-radius: 6.066666rem;
+            border-top-left-radius: 6.066666rem;
+            border-top-right-radius: 6.066666rem;
+            border-bottom-right-radius: 6.066666rem;
+            border-bottom-left-radius: 6.066666rem;
+        }
+        .top-bar .right{
+            display: flex;
+            align-items: center;
+            margin-left: 15vw;
+            user-select: none;
+        }
+        
+        .top-bar .right .round_icon{
+            width: 10vw;
+            height: 10vw;
+            margin-left: 7vw;
+            margin-top:  1.5vw;
+        }
+        .top-bar .right p{
+            font-size: 4.5vw;
+        }
+        .new-shop-info.simple{
+            display: flex;
+            flex-direction: column;
+        }
+        .new-shop-info.simple .wrapper {
+            position: relative;
+            background-color: #fff;
+        }
+        .new-shop-info.simple .wrapper .banner-box{
+            position: relative;
+            height: 20vw;
+            width: 100vw;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .new-shop-info.simple .wrapper .banner{
+            background-image: url("image/vshop-default-shoplogo-logo1.jpg");
+            position: absolute;
+            top: -10vw;
+            right: -10vw;
+            bottom: -10vw;
+            left: -10vw;
+            -webkit-filter: blur(.133333rem);
+            filter: blur(10px);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: cover;
+        }
+
+        .new-shop-info.simple .ct {
+            display: flex;
+            padding: .48rem .4rem;
+            position: relative;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.4);
+            height: 100%;
+            width: 100vw;
+        }
+
+        .new-shop-info.simple .avatar {
+            -webkit-flex: 0 0 auto;
+            flex: 0 0 auto;
+            display: flex;
+            margin-right: .32rem;
+            float:left;
+            margin-top: 3vw;
+            margin-left: 2vw;
+            width: 10vw;
+            height: 10vw;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            border-radius: 6.066666rem;
+            border-top-left-radius: 6.066666rem;
+            border-top-right-radius: 6.066666rem;
+            border-bottom-right-radius: 6.066666rem;
+            border-bottom-left-radius: 6.066666rem;
+            background-image: url("image/PAT_LOGO.jpg");
+        }
+        a {
+            color: #323232;
+            outline-style: none;
+            text-decoration: none;
+        }
+        a:-webkit-any-link {
+            color: -webkit-link;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .new-shop-info.simple .info {
+            flex: 1;
+            display: flex;
+            margin-left: 2vw;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            overflow: hidden;
+            -webkit-justify-content: space-around;
+            justify-content: space-around;
+        }
+        .new-shop-info.simple .shop-title {
+            display: flex;
+            height: 4vw;
+            font-size: 0;
+            white-space: nowrap;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .new-shop-info.simple .shop-name {
+            -webkit-flex: 0 0 auto;
+            flex: 0 0 auto;
+            font-size: 2vw;
+            font-weight: 45vw;
+            line-height: 8vw;
+            /* max-width: 4.933333rem; */
+            color: #fff;
+            letter-spacing: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            vertical-align: middle;
+        }
+        .new-shop-info .point.online {
+            background-color: #4bd964;
+        }
+        .new-shop-info .point {
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            margin-left: .01vw;
+            margin-top: .01vw;
+            border-radius: 6.133333rem;
+            background-color: #cbcdd3;
+        }
+        i {
+            font-style: italic;
+        }
+        .new-shop-info.simple .status {
+            -webkit-flex: 0 0 auto;
+            flex: 0 0 auto;
+            color: #fff;
+            background-color: rgba(255,255,255,.3);
+        }
+
+        .new-shop-info .status {
+            display: inline-block;
+            margin-left: .6vw;
+            padding: 0 .56vw;
+            border-radius: 2.266666vw;
+            height: 2.6vw;
+            font-size: 1.2vw;
+            line-height: 0.5vw;
+            margin-top: 0.3vw;
+            color: #9a9a9a;
+            background-color: #f8f8f8;
+            vertical-align: middle;
+        }
+
+        .new-shop-info.simple .shop-icons {
+            margin-top: .2vw;
+            white-space: normal;
+        }
+        .new-shop-info .shop-icons {
+            height: 5vw;
+            line-height: .4vw;
+            font-size: 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .new-shop-info .brand-spirit.bg-lv1 {
+            vertical-align: 1vw;
+            width: 25px;
+            height: 6vw;
+            background-position: -1px -1px;
+        }
+        .new-shop-info .shop-icons .shop-icon {
+            display: inline-block;
+            margin-right: .10vw;
+        }
+        .new-shop-info .brand-spirit {
+            zoom: 1;
+            background-repeat: no-repeat;
+            background-image: url(https://si.geilicdn.com/img-5b260000016e67e2e70d0a21924a-unadjust_112_26.png);
+        }
+    </style>
+
+    <style>
+        .new-shop-info.simple .header-tab-bar {
+            position: relative;
+            display: -webkit-flex;
+            display: flex;
+            padding: .186666vw 0 .186666rem .32rem;
+            height: 4vw;
+            white-space: nowrap;
+            font-size: 0;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        .new-shop-info.simple .header-tab-bar .search {
+            -webkit-flex: 0 0 auto;
+            margin-left: 0.5vw;
+            flex: 0 0 auto;
+            height: 3vw;
+            line-height: .8vw;
+            border-radius: .8vw;
+            width: 10vw;
+            font-size: 1.5vw;
+            color: #404040;
+            background-color: #f8f8f8;
+            text-align: center;
+            text-decoration: none;
+            z-index: 2;
+            margin-top: 0.5vw;
+        }
+        a {
+            color: #323232;
+            outline-style: none;
+            text-decoration: none;
+        }
+        a:-webkit-any-link {
+            color: -webkit-link;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .new-shop-info.simple .header-tab-bar .search .icon {
+            margin-right: 2vw;
+            vertical-align: sub;
+            display: inline-block;
+            width: 2.48vw;
+            height: 2.48vw;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+        }
+        i {
+            font-style: italic;
+        }
+
+        .new-shop-info.simple .header-tab-bar .between {
+            -webkit-flex: 0 0 auto;
+            flex: 0 0 auto;
+            width: 4.133333vw;
+            height: .8vw;
+            box-shadow: 0 0 0.106666vw 0.16vw;
+            z-index: 1;
+        }
+        .header-tab-bar .scroller {
+            position: relative;
+            margin-left: 5vw;
+            -webkit-flex: 1;
+            flex: 1;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0%;
+            height: 5vw;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        .header-tab-bar .tab-list {
+            display: inline-block;
+            font-size: 4;
+            line-height: 1.8vw;
+            color: #404040;
+            white-space: nowrap;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+
+        .header-tab-bar .tab {
+            font-size: 2.0vw;
+            display: inline-block;
+            padding: 0 3.4vw;
+            padding-top: 1vw;
+            padding-right:15vw;
+            padding-bottom: 0px;
+            padding-left: 0.4vw;
+            cursor: pointer;
+        }
+        
+    </style>
+
+    <style>
+
+/****************** 推荐商品列表部分 ******************/
+.main .business{
+    width: 100%;
+    margin-bottom: 14vw;
+    flex-direction: column;
+}
+.main .business li{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2.5vw;
+    user-select: none;
+    border-bottom: solid 1px #DDD;
+    display: flex;
+    
+}
+.main .business li img{
+    width: 25vw;
+    height: 25vw;
+}
+.main .business li .business-info{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 3vw;
+    flex-direction:column;
+}
+.main .business li .business-info .business-info-h{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+.main .business li .business-info .business-info-h h3{
+    font-size: 3vw;
+    color: #333;
+}
+.main .business li .business-info .business-info-h .business-info-like{
+    width: 5.6vw;
+    height: 6.4vw;
+    color: red;
+    font-size: 6vw;
+    margin-right: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .business li .business-info .business-info-star{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2vw;
+    font-size: 3.1vw;
+}
+.main .business li .business-info .business-info-star .business-info-star-left{
+    display: flex;
+    align-items: center;
+}
+.main .business li .business-info .business-info-star .business-info-star-left .fa-star{
+    color: #FEC80E;
+    margin-right: 0.5vw;
+}
+.main .business li .business-info .business-info-star .business-info-star-left p{
+    color: #666;
+    margin-left: 1vw;
+}
+.main .business li .business-info .business-info-star .business-info-star-right{
+    background-color: red;
+    color: #fff;
+    font-size: 2.4vw;
+    border-radius: 2px;
+    padding: 0 0.6vw;
+}
+.main .business li .business-info .business-info-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2vw;
+    color: red;
+    font-size: 4vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.main .business li .business-info .business-info-explain{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3vw;
+}
+.main .business li .business-info .business-info-explain div{
+    border: solid 1px #DDD;
+    font-size: 2.8vw;
+    color: #666;
+    border-radius: 3px;
+    padding: 0 0.1vw ;
+}
+.main .business li .business-info .business-info-promotion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.8vw;
+}
+.main .business li .business-info .business-info-promotion .business-info-promotion-left{
+    display: flex;
+    align-items: center;
+}
+.main .business li .business-info .business-info-promotion .business-info-promotion-left .business-info-promotion-left-incon{
+    width: 4vw;
+    height: 4vw;
+    background-color: #70BC46;
+    border-radius: 3px;
+    font-size: 3vw;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .business li .business-info .business-info-promotion .business-info-promotion-left p{
+    color: #666;
+    font-size: 3vw;
+    margin-left: 2vw;
+}
+.main .business li .business-info .business-info-promotion .business-info-promotion-right{
+    display: flex;
+    align-items: center;
+    font-size: 2.5vw;
+    color: #999;
+}
+.main .business li .business-info .business-info-promotion .business-info-promotion-right p{
+    margin-right: 2vw;
+}
+    </style>
+
+    <style>
+        /****************** 底部菜单部分 ******************/
+        .main .footer{
+            width: 100%;
+            height: 14vw;
+            border-top: solid 1px #DDD;
+            background-color: #fff;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .main .footer li{
+            /*li本身的尺寸完全由内容撑起*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #999;
+            user-select: none;
+            cursor: pointer;
+        }
+        .main .footer li p{
+            font-size: 2.8vw;
+        }
+        .main .footer li i{
+            font-size: 5vw;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgba(245, 245, 245, 1);">
+<div class="main">
+    <div class = "top-bar">
+        <div class="left">
+            <img src="image/PAT_LOGO.jpg">
+        </div>
+        <div class="right">
+            <img src="image/user.jpg" class="round_icon">
+            <p>2018slgys</p>
+        </div>
+    </div>
+
+    <section class="new-shop-info simple j-shop-header">
+        <div class="wrapper">
+            <div class="banner-box">
+                <div class="banner">
+                </div>
+                <div class="ct">
+                    <a class="avatar J_GoShopDetail" href="https://weidian.com/certDetails.html?userid=1867547176" target="_blank"></a>
+                    <div class="info">
+                        <div class="shop-title">
+                            <p class="shop-name" style>百腾周边</p>
+                            <div class="status" style="background-color: rgba(255,255,255,0.2);
+                            color: rgba(255,255,255,0.7);">
+                            <i class="point online"></i>
+                            <span class="txt">1分钟前登陆</span>
+                            </div>
+                        </div>
+                        <ul class="shop-icons">
+                            <li class="shop-icon brand-spirit bg-lv1"></li>
+                            <li class="shop-icon brand-spirit bg-lv1"></li>
+                            <li class="shop-icon brand-spirit bg-lv1"></li>
+                            <li class="shop-icon brand-spirit bg-lv1"></li>
+                            <li class="shop-icon brand-spirit bg-lv1"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-tab-bar" style="background-color: rgb(255, 255, 255);">
+    
+            <a class="search" href="https://weidian.com/search_result.html?userid=1867547176" style="background-color: #F8F8F8;color: rgba(64, 64, 64, 1);">
+                <i class="icon" style="background-image: url(https://si.geilicdn.com/img-2fab00000168840b9dd40a217252-unadjust_44_44.png)">
+                </i>搜索</a>
+            <div class="between" style="color:#fff;"></div>
+            <div class="scroller">
+                <ul class="tab-list" style="color: rgba(34, 34, 34, 1);">
+                    <li class="tab active" id="tab-shop" style="font-weight: bold;color: rgba(252, 72, 69, 1);" data-spider-action-name="h5店铺首页-首页">首页</li>
+                    
+                    <li class="tab" id="tab-allProducts" data-spider-action-name="h5店铺首页-全部">全部</li>
+                    
+                    
+                    <li class="tab" id="tab-newArrival" data-spider-action-name="h5店铺首页-新品">新品</li>
+                    
+                    <li class="tab" id="tab-comments" data-spider-action-name="h5店铺首页-评论">评论</li>
+                </ul>
+            </div>
+    </section>
+
+    <!-- 商品展示界面 -->
+        <ul class="business">
+
+            <li>
+                <div onclick="location.href='PAT_white.html'">
+                    <img src="image/PTA_White_CN2.jpg">
+                </div>
+
+                <div class="business-info">
+                    <div class="business-info-h">
+                        <h3>【女款】学霸养成文化衫，穿它就对了！</h3>
+                        <div class="business-info-like">
+                            <i class="fa fa-shopping-cart"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="business-info-star">
+                        <div class="business-info-star-left">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p>5.0 销量180</p>
+                        </div>
+                        <div class="business-info-star-right">
+                            立即购买
+                        </div>
+                    </div>
+                    <div class="business-info-price">
+                        <i class="fa fa-cny">49.00</i>
+                    </div>
+                    <div class="business-info-explain">
+                        <div>PAT</div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <img src="image/PTA_Black_CN.png">
+                </div>
+
+                <div class="business-info">
+                    <div class="business-info-h">
+                        <h3>【男款】学霸养成文化衫，穿它就对了！</h3>
+                        <div class="business-info-like">
+                            <i class="fa fa-shopping-cart"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="business-info-star">
+                        <div class="business-info-star-left">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p>4.9 销量100</p>
+                        </div>
+                        <div class="business-info-star-right">
+                            立即购买
+                        </div>
+                    </div>
+                    <div class="business-info-price">
+                        <i class="fa fa-cny">39.00</i>
+                    </div>
+                    <div class="business-info-explain">
+                        <div>拼爹不如拼题A</div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <img src="image/PAT_Black_CN_comment3.jpg">
+                </div>
+
+                <div class="business-info">
+                    <div class="business-info-h">
+                        <h3>【中性】学霸养成文化衫，穿它就对了！</h3>
+                        <div class="business-info-like">
+                            <i class="fa fa-shopping-cart"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="business-info-star">
+                        <div class="business-info-star-left">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p>4.9 销量80</p>
+                        </div>
+                        <div class="business-info-star-right">
+                            立即购买
+                        </div>
+                    </div>
+                    <div class="business-info-price">
+                        <i class="fa fa-cny">39.00</i>
+                    </div>
+                    <div class="business-info-explain">
+                        <div>英雄各有见,何必问出处</div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <img src="image/rili.jpg">
+                </div>
+
+                <div class="business-info">
+                    <div class="business-info-h">
+                        <h3>百腾 2020 特制新春台历</h3>
+                        <div class="business-info-like">
+                            <i class="fa fa-shopping-cart"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="business-info-star">
+                        <div class="business-info-star-left">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p>4.8 销量60</p>
+                        </div>
+                        <div class="business-info-star-right">
+                            立即购买
+                        </div>
+                    </div>
+                    <div class="business-info-price">
+                        <i class="fa fa-cny">29.00</i>
+                    </div>
+                    <div class="business-info-explain">
+                        <div>2020拼题A纪念台历</div>
+                    </div>
+                </div>
+            </li>
+
+            
+        </ul>
+
+    <!-- 底部菜单部分 -->
+    <ul class="footer">
+        <li onclick="location.href='index.html'" style="color:  red;">
+            <i class="fa fa-home" ></i>
+            <p>首页</p>
+        </li>
+        <li>
+            <i class="fa fa-compass"></i>
+            <p>发现</p>
+        </li>
+        <li onclick="location.href='shopping-cart.html'">
+            <i class=" fa fa-shopping-cart"></i>
+            <p>购物车</p>
+        </li>
+        <li>
+            <i class="fa fa-user-o"></i>
+            <p>我的</p>
+        </li>
+    </ul>
+</div>
+
+
+
+
+</body>
